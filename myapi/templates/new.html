@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        h5{
+            margin-left: 5%;
+        }
+
+        body{
+            background-color: gray;
+        }
+    </style>
+
+</head>
+
+<body>
+    {% for product in data %}
+
+    <h1>Product Information {{product.id}}</h1>
+
+        
+       <h5>Seller_Name: {{ product.Seller_Name }} </h5>
+       <h5>Seller_Address: {{ product.Seller_Address }}</h5>
+       <h5>Seller_Number: {{ product.Seller_Number }}</h5>
+       <h5>Buyer_Address: {{ product.Buyer_Address }}</h5>
+       <h5>Buyer_Number: {{ product.Buyer_Number }}</h5>
+       <h5>Item: {{ product.Item }}</h5>
+       <h5>Quantity: {{ product.Quantity }}</h5>
+       <h5>Price: {{ product.Price }}</h5>
+       <!-- <a href="{% url 'myapi:pdf_view' %}"><button type="submit">pdf</button></a> -->
+
+       {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Seller_Name</th>
+            <th>Seller_Address</th>
+            <th>Seller_Number</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Buyer_Address</th>
+            <th>Buyer_Number</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in data %}
+
+            <tr>
+                
+                <td>{{ item.Seller_Name }}</td>
+                <td>{{ item.Seller_Address }}</td>
+                <td>{{ item.Seller_Number }}</td>
+            </tr>
+            <tr>
+                <td>{{ item.Buyer_Address }}</td>
+                <td>{{ item.Buyer_Number }}</td>
+            </tr>
+            <tr>
+                <td>{{ item.Item }}</td>
+                <td>{{ item.Quantity }}</td>
+                td>{{ item.Price }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+</body>
+</html>
